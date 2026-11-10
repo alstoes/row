@@ -20,7 +20,7 @@ The file has four components stacked vertically: a **Page title** at the very to
 
 ## Component 1 — Page title
 
-A single `<h1 class="dash-title">My Dashboard</h1>` at the very top of the body. Styled as:
+A single `<h1 class="dash-title">Alex Dashboard</h1>` at the very top of the body. Styled as:
 
 - `font-size: 28px`, `font-weight: 700`, `letter-spacing: -0.025em`.
 - A vertical white-to-soft-grey gradient masked into the text — set `background: linear-gradient(180deg, #FFFFFF 0%, #C7C4BC 120%)`, then `-webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;` so the gradient shows through the letterforms.
@@ -267,7 +267,7 @@ After both handlers wired: call `loadToday()` and `loadTomorrow()`. Run `renderS
 ## Acceptance checklist
 
 - File runs from a `file://` URL or VS Code Live Server with no errors in console.
-- The page opens with a gradient `My Dashboard` headline at the top.
+- The page opens with a gradient `Alex Dashboard` headline at the top.
 - The goal ticker shows a green pulsing LED, the word `GOALS`, the current pending goal in mono, and a `done/total` pill on the right. It cycles to the next pending goal every 5 seconds with a vertical slide animation. Adding, checking, deleting, or reordering a goal updates the ticker immediately (not on the next 5s cycle).
 - When all goals are checked, the ticker shows `✓ All goals done — solid day.` instead of an empty rotation. With zero goals, it shows `No goals set for today — add one to get rolling.`
 - Day ring shows the correct percentage at the current time, with the right phase label and color.
