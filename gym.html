@@ -143,7 +143,7 @@ img, video, canvas, svg { max-width: 100%; }
   z-index: 50;
   display: flex;
   justify-content: center;
-  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  padding: 10px max(16px, env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
   background: linear-gradient(180deg, rgba(10,10,11,0) 0%, rgba(10,10,11,0.78) 38%, rgba(10,10,11,0.94) 100%);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -543,7 +543,7 @@ img, video, canvas, svg { max-width: 100%; }
   display: none; position: fixed; inset: 0;
   background: rgba(0,0,0,0.65); backdrop-filter: blur(6px);
   z-index: 100; align-items: center; justify-content: center;
-  padding: 24px;
+  padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
 }
 .po-modal-bg.show { display: flex; }
 .po-modal {
@@ -1074,7 +1074,7 @@ img, video, canvas, svg { max-width: 100%; }
 .wt-overlay.is-open { transform: translateY(0); }
 .wt-overlay-inner {
   max-width: 720px; margin: 0 auto;
-  padding: 24px 20px 40px;
+  padding: max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) calc(40px + env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
 }
 .wt-overlay-h {
   display: flex; align-items: center; gap: 14px;
@@ -1151,7 +1151,7 @@ img, video, canvas, svg { max-width: 100%; }
 }
 .wt-cam-actions {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 24px 28px calc(24px + env(safe-area-inset-bottom));
+  padding: 24px max(28px, env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) max(28px, env(safe-area-inset-left));
   background: #000;
 }
 .wt-cam-btn {
@@ -1178,7 +1178,7 @@ img, video, canvas, svg { max-width: 100%; }
   opacity: 0; pointer-events: none;
   transition: opacity 0.2s;
   display: flex; flex-direction: column;
-  padding: 24px 16px;
+  padding: max(24px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
 }
 .wt-viewer.is-open { opacity: 1; pointer-events: auto; }
 .wt-viewer-stage {
